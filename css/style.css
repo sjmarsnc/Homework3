@@ -1,0 +1,12 @@
+body {
+    color: #444;
+    background-color: #eee;
+}
+
+#generatorArea {
+    background-color: #fff;
+}
+
+#outerBox {
+    max-width: 960px;
+}
