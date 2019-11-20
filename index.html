@@ -17,13 +17,75 @@
     <script>
 
         function makePassword() {
-            alert("Generate Password button clicked");
+
+            var result = document.getElementById("generatedPassword"); 
+            result.textContent = " "; 
+        
+            var useNums = confirm("Do you want to use numbers?");
+            var useUpperCase = confirm("Do you want to use upper case letters?");
+            var useLowerCase = confirm("Do you want to use lower case letters");
+            var useSpecialChars = confirm("Do you want to use special characters?");
+
+            var nums = ["0","1","2","3","4","5","6","7","8","9"];
+            var specialChars = "!@#$%&*?~^<>[]{}\/|()";
+            var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+            var upperCase = lowerCase.toUpperCase(); 
+
+            var useArrays = []; 
+
+            // verify that at least one type of character was selected 
+
+            if (useNums) {  
+                useArrays.push(nums);
+            }
+            if (useUpperCase) {
+                useArrays.push(upperCase);
+            }
+
+            if (useLowerCase) {
+                useArrays.push(lowerCase);
+            }
+
+            if (useSpecialChars) {
+                useArrays.push(specialChars);
+            }
+
+            console.log(useArrays);
+
+            var howLong = prompt("How long do you want your password to be (8-128 chars)?");
+            /* check for valid answer */ 
+
+            var password = "";  
+
+            for (var i=0; i < howLong; i++) {
+                // determine type of character from types user selected 
+                var charType = Math.floor( Math.random() * useArrays.length);
+                console.log(charType);
+
+                // randomly pick a character from that array 
+                var charSelection = Math.floor( Math.random() * useArrays[charType].length);
+                console.log(charSelection);
+                
+                // append it to the password 
+                password = password + useArrays[charType][charSelection];
+                console.log(password);
+            }
+            
+            // var result = document.getElementById("generatedPassword"); 
+            result.textContent = password; 
+        
+            // now it can be copied so enable the button 
             document.getElementById("copyClipboard").disabled = false;
 
         }
 
         function copyToClipboard() {
-            alert("Copy to Clipboard button pushed")
+            alert("Copy to Clipboard button pushed");
+            passwordEl = document.getElementById("generatedPassword");
+            passwordEl.select(); 
+            document.execCommand("copy"); 
+            // somehow indicate that it has been copied? 
+            
         }
 
     </script>
@@ -47,7 +109,7 @@
                    <button type="submit" onClick="makePassword();" class="btn btn-primary active" id="generatePassword">
                        Generate Password
                    </button>
-                   <button type="submit" onClick="copyToClipboard" class="btn btn-primary disabled" id="copyClipboard">
+                   <button type="submit" onClick="copyToClipboard();" class="btn btn-primary disabled" id="copyClipboard">
                        Copy to clipboard
                    </button>
                </div>
