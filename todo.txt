@@ -1,0 +1,10 @@
+Still to do: 
+
+* rounded corners on container
+* get correct color on generate password button - done, used paint and eyedropper 
+reset array each time and make sure at least one type of character is chosen, or default to all. 
+blank out password when generating a new one, also unselect the textarea 
+* get "your secure password" to appear before password is generated 
+ruling lines - even with box   
+* center buttons when they stack 
+indicate by changing content of button when it has been copied?  

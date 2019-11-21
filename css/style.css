@@ -1,12 +1,49 @@
 body {
-    color: #444;
-    background-color: #eee;
+    color: #3b4954;
+    background-color: #f9fafc;
+}
+
+/* line color #e7e9ea */
+#textAreaBorders {
+    border-width: 2px 0px; 
+    border-color: #e7e9ea;
+}
+
+#copyClipboard, #generatePassword {
+    border-radius: 2rem; 
+    font-weight: 400; 
+    font-size: 1.5rem; 
+    color: white;
+}
+
+#generatePassword { 
+    background-color: #af0808;
+    border-color: #af0808; 
+}
+
+#copyClipboard {
+    background-color: #c0c7cf; 
+}
+
+#generatedPassword {
+    border-style: dashed; 
+    border-width: 2px; 
+    text-align: center; 
+    font-family: monospace;  
+    font-size: 1.5rem;
+    color: #757575;
 }
 
 #generatorArea {
     background-color: #fff;
+    padding: 2rem;
 }
 
 #outerBox {
     max-width: 960px;
+}
+
+#initialText {
+    color: #333; 
+    test-align: center; 
 }
