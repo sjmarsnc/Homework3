@@ -14,80 +14,6 @@
 </head>
 
 <body>
-    <script>
-
-        function makePassword() {
-
-            var result = document.getElementById("generatedPassword");
-            // result.value = "Your Secure Password"; 
-
-            var useNums = confirm("Do you want to use numbers?");
-            var useUpperCase = confirm("Do you want to use upper case letters?");
-            var useLowerCase = confirm("Do you want to use lower case letters");
-            var useSpecialChars = confirm("Do you want to use special characters?");
-
-            var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-            var specialChars = "!@#$%&*?~^<>[]{}\/|()";
-            var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-            var upperCase = lowerCase.toUpperCase();
-
-            var useArrays = [];
-
-            // verify that at least one type of character was selected 
-
-            if (useNums) {
-                useArrays.push(nums);
-            }
-            if (useUpperCase) {
-                useArrays.push(upperCase);
-            }
-
-            if (useLowerCase) {
-                useArrays.push(lowerCase);
-            }
-
-            if (useSpecialChars) {
-                useArrays.push(specialChars);
-            }
-
-            console.log(useArrays);
-
-            var howLong = prompt("How long do you want your password to be (8-128 chars)?");
-            /* check for valid answer */
-
-            var password = "";
-
-            for (var i = 0; i < howLong; i++) {
-                // determine type of character from types user selected 
-                var charType = Math.floor(Math.random() * useArrays.length);
-                console.log(charType);
-
-                // randomly pick a character from that array 
-                var charSelection = Math.floor(Math.random() * useArrays[charType].length);
-                console.log(charSelection);
-
-                // append it to the password 
-                password = password + useArrays[charType][charSelection];
-                console.log(password);
-            }
-
-            // var result = document.getElementById("generatedPassword"); 
-            result.textContent = password;
-
-            // now it can be copied so enable the button 
-            document.getElementById("copyClipboard").disabled = false;
-
-        }
-
-        function copyToClipboard() {
-            passwordEl = document.getElementById("generatedPassword");
-            passwordEl.select();
-            document.execCommand("copy");
-            // somehow indicate that it has been copied? 
-            alert("Generated password copied to clipboard");
-        }
-
-    </script>
 
     <div class="container m-auto" id="outerBox">
         <h1 class="text-center mb-5 mt-2">Password Generator</h1>
@@ -98,7 +24,8 @@
                     <h2>Generate a password</h2>
                 </div>
             </div>
-            <div class="row pt-3 pb-3 border-bottom border-top border-medium" id="textAreaBorders">
+            <hr class="rule">
+            <div class="row pt-3 pb-3" id="textAreaBorders">
                 <div class="col col-12">
                     <form name="formWrapper">
                         <textarea class="form-control rounded-lg" id="generatedPassword" rows="4"
@@ -106,6 +33,7 @@
                     </form>
                 </div>
             </div>
+            <hr class="rule">
             <div class="row border-top border-light justify-content-between m-auto">
                 <div class="col col-xs-12 m-3">
                     <button type="submit" onClick="makePassword();" class="btn btn-primary active pr-4 pl-4 "
@@ -125,7 +53,7 @@
     </div>
 
 
-
+    <script src="./scripts/script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

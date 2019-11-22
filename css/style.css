@@ -3,11 +3,6 @@ body {
     background-color: #f9fafc;
 }
 
-/* line color #e7e9ea */
-#textAreaBorders {
-    border-width: 2px 0px; 
-    border-color: #e7e9ea;
-}
 
 #copyClipboard, #generatePassword {
     border-radius: 2rem; 
