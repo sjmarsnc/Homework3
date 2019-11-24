@@ -28,10 +28,11 @@ default length of 24 is used.
 Once a password has been generated the user can click on the "Copy to Clipboard" button to copy the password
 to the system clipboard so that they can paste it into the application that needs a password.   
 
+![password generator screen shot](./PasswordGenerator.png)
+
 In the case of a very small screen such as the iPhone 5 a media query removes the secondary title - don't really 
 need the "Password Generator" and "Generate a password" and the "Generate Password" button!  
 
-![password generator screen shot](./PasswordGenerator.png)
 
 ## User Story
 
