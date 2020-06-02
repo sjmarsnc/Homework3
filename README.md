@@ -6,7 +6,7 @@ Password Generator
 
 ## Description
 
-This application generates a password based on responses from the user.   The user can specify: 
+This [application](https://sjmarsnc.github.io/PasswordGenerator/) generates a password based on responses from the user.   The user can specify: 
 
 * Length (must be between 8 and 128 characters).  If the value given is not in this range a 
 default length of 24 is used.  
@@ -28,7 +28,7 @@ default length of 24 is used.
 Once a password has been generated the user can click on the "Copy to Clipboard" button to copy the password
 to the system clipboard so that they can paste it into the application that needs a password.   
 
-![password generator screen shot](./PasswordGenerator.png)
+![password generator screen shot](./PasswordGenerator.PNG)
 
 In the case of a very small screen such as the iPhone 5 a media query removes the secondary title - don't really 
 need the "Password Generator" and "Generate a password" and the "Generate Password" button!  
