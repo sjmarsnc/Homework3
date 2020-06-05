@@ -8,3 +8,5 @@ blank out password when generating a new one, also unselect the textarea
 * ruling lines - even with box   
 * center buttons when they stack 
 indicate by changing content of button when it has been copied?  
+
+ d-none d-sm-block

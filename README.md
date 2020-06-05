@@ -1,8 +1,7 @@
-# Homework3
-Password Generator 
+# Password Generator 
 
 
-# Unit 03 JavaScript Homework: Password Generator
+# Practice with JavaScript: Password Generator
 
 ## Description
 
@@ -50,8 +49,8 @@ For companies that handle large amounts of sensitive data, weak passwords can po
 
 GIVEN that a user needs a new, secure password
 
-WHEN prompted for password criteria
+WHEN prompted for password criteria such as upper and lower case, length, use of numbers and special characters 
 
-THEN a password is generated
+THEN a password is generated that meets those criteria 
 
  
