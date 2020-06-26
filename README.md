@@ -1,7 +1,7 @@
 # Password Generator 
 
 
-# Practice with JavaScript: Password Generator
+# JavaScript: Password Generator
 
 ## Description
 
